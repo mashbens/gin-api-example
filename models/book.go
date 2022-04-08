@@ -1,13 +1,13 @@
 package models
 
 type Book struct {
-	ID    int    `json:"id" param:"id"`
-	Title string `json:"title"`
-	Price int    `json:"price"`
+	ID    int
+	Title string
+	Price int
 }
 
 type BookInput struct {
-	ID    int    `json:"id" param:"id"`
-	Title string `json:"title"`
-	Price int    `json:"price"`
+	ID    int    `json:"id" param:"id" `
+	Title string `json:"title" binding:"required" `
+	Price int    `json:"price" binding:"required,number" `
 }
